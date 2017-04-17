@@ -17,6 +17,7 @@ public class MainActivity extends Activity {
 	private TextView txtName;
 	private TextView txtEmail;
 	private Button btnLogout;
+	private Button btnGoToMap;
 
 	private SQLiteHandler db;
 	private SessionManager session;
@@ -29,6 +30,7 @@ public class MainActivity extends Activity {
 		txtName = (TextView) findViewById(R.id.name);
 		txtEmail = (TextView) findViewById(R.id.email);
 		btnLogout = (Button) findViewById(R.id.btnLogout);
+		btnGoToMap = (Button) findViewById(R.id.btnGoToMap);
 
 		// SqLite database handler
 		db = new SQLiteHandler(getApplicationContext());
@@ -58,6 +60,15 @@ public class MainActivity extends Activity {
 				logoutUser();
 			}
 		});
+
+		// Go to map to put object
+		btnGoToMap.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				goIntoMaps();
+			}
+		});
 	}
 
 	/**
@@ -73,5 +84,13 @@ public class MainActivity extends Activity {
 		Intent intent = new Intent(MainActivity.this, LoginActivity.class);
 		startActivity(intent);
 		finish();
+	}
+
+	private void goIntoMaps() {
+		// Launching the map activity
+		Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+		startActivity(intent);
+		finish();
+
 	}
 }
