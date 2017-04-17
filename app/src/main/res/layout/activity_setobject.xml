@@ -4,27 +4,74 @@
     android:layout_height="match_parent"
     android:weightSum="1">
 
+    <TextView
+        android:id="@+id/titleCategOggetto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:gravity="left"
+        android:text="@string/categ_oggetto"
+        android:textAlignment="textStart"
+        android:textSize="16dip"
+        android:padding="10dp"
+        android:background="@color/iron"/>
+
+    <Button
+        android:id="@+id/categOggetto"
+        android:layout_width="match_parent"
+        android:layout_height="21dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="0.04"
+        android:background="@color/white"
+        android:gravity="left"
+        android:padding="10dp"
+        android:text="Scegli categoria" />
+
+    <TextView
+        android:id="@+id/titleNomeOggetto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:gravity="left"
+        android:text="@string/nome_oggetto"
+        android:textSize="16dip"
+        android:padding="10dp"
+        android:background="@color/iron"/>
+
     <EditText
         android:id="@+id/nomeOggetto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
 
+        android:maxLines="1"
         android:hint="@string/nome_oggetto"
         android:inputType="textCapWords"
         android:padding="10dp"
-        android:singleLine="true" />
+        android:layout_weight="0.14" />
+
+    <TextView
+        android:id="@+id/titleDescOggetto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:gravity="left"
+        android:text="@string/desc_oggetto"
+        android:padding="12dp"
+        android:textSize="16dip"
+        android:background="@color/iron"/>
 
     <EditText
         android:id="@+id/descOggetto"
+        android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-
+        android:layout_weight="0.19"
+        android:gravity="top"
+        android:maxLines="5"
         android:hint="@string/desc_oggetto"
-        android:inputType="textCapWords"
-        android:padding="10dp"
-        android:singleLine="true"
-        android:layout_weight="0.14" />
+        android:padding="2dp" />
 
 </LinearLayout>

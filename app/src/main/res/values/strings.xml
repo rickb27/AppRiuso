@@ -15,4 +15,5 @@
     <string name="btn_GoToMap">Open Maps</string>
     <string name="nome_oggetto">Nome oggetto</string>
     <string name="desc_oggetto">Descrizione</string>
+    <string name="categ_oggetto">Categoria</string>
 </resources>

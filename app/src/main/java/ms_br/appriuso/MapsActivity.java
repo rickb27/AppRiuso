@@ -193,9 +193,10 @@ public class MapsActivity extends FragmentActivity
 
         // set dialog message
         alertDialogBuilder
+                .setTitle(" ")
                 .setMessage("Vuoi depositare qui il tuo oggetto?")
                 .setCancelable(false)
-                .setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+                .setPositiveButton("SI",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,int id) {
 
                         Intent intent = new Intent(MapsActivity.this, SetObjectActvity.class);
@@ -206,7 +207,7 @@ public class MapsActivity extends FragmentActivity
                         MapsActivity.this.finish();
                     }
                 })
-                .setNegativeButton("No",new DialogInterface.OnClickListener() {
+                .setNegativeButton("NO",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,int id) {
                         // if this button is clicked, just close
                         // the dialog box and do nothing
