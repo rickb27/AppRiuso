@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/simone/.android/build-cache/d48ed7590555256dcb88b02a1027f4648f724d64/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="/home/simone/pdmsrc/AppRiuso2/app/build/intermediates/pre-dexed/debug/classes_a2b4e760229d0fb2e29ae14ca54b980a1ee9a37d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/simone/.android/build-cache/77f1935e56c2de2f2df982e1b17f30c73668e67d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/home/simone/pdmsrc/AppRiuso2/app/build/intermediates/pre-dexed/debug/classes_b45b3ca4baf63dcdde821a0feff8ea799d925693.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/simone/.android/build-cache/6353e805372bbd0e14308cdebac3ef41d227e9b4/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/home/simone/pdmsrc/AppRiuso2/app/build/intermediates/pre-dexed/debug/classes_ec413ce0563977112690ed6ddefa60b2b70d79f9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/simone/.android/build-cache/fad76e5b90f37a2c230b437d01b0db481b34ece5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/home/simone/pdmsrc/AppRiuso2/app/build/intermediates/pre-dexed/debug/classes_0f98596824dea625b6a50923095ca082e343b952.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/simone/.android/build-cache/42b476c40ac7bb34c8096e89028dca58a50ef710/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/home/simone/pdmsrc/AppRiuso2/app/build/intermediates/pre-dexed/debug/classes_975b8dbce587a24cd7907b7c17d579b200dd3403.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/simone/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="/home/simone/pdmsrc/AppRiuso2/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1_eb9168cd1255c95b1e5b0235a777fe8c387ec885.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/simone/.android/build-cache/bb4cb1678cf5e909641470cada1470a177b6699d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/home/simone/pdmsrc/AppRiuso2/app/build/intermediates/pre-dexed/debug/classes_6b632b8c173beeb89d73d2e9d743022781f2d1eb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/simone/Android/Sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/home/simone/pdmsrc/AppRiuso2/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_def2fe13a755c29e838e3649c43c9f1072ec23f4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/simone/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/home/simone/pdmsrc/AppRiuso2/app/build/intermediates/pre-dexed/debug/support-annotations-25.3.1_161399a4bf5a12af013c69ca5de5dccd52670dfe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/simone/.android/build-cache/57090bc4a750ed73096f55420a0d139c7aa6abbf/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/home/simone/pdmsrc/AppRiuso2/app/build/intermediates/pre-dexed/debug/classes_8ae5bb3d8e9028f78ac1b5545bd8092852600d6c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/simone/.android/build-cache/074d043f4005e90e8d8bce9619f71ab677b52ae2/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/home/simone/pdmsrc/AppRiuso2/app/build/intermediates/pre-dexed/debug/classes_dfb746bb162516f881ff20c887c710d3b3b52d2a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/simone/.android/build-cache/39c4cfa042e2dcaff4b6e7e722c9640da98bbe49/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e40b9a81989bd4a846018551c280f8c4d837bf2e">
+        <dex dex="/home/simone/pdmsrc/AppRiuso2/app/build/intermediates/pre-dexed/debug/classes_a70f9f1b8748ddc81782d3a774cb8288083e8997.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/simone/.android/build-cache/92e11c9126e026bddb5b552a894938d37dca453a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/simone/pdmsrc/AppRiuso2/app/build/intermediates/pre-dexed/debug/classes_8cdfb0ec99182599f2c49e025b80d36a504138eb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/simone/.android/build-cache/5eb2f1ce0bd87068d969d6aac508df9c78c79818/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/home/simone/pdmsrc/AppRiuso2/app/build/intermediates/pre-dexed/debug/classes_18a6831239cde7e00781e223487c6dd42e81660d.jar" />
+    </item>
+
+</items>
