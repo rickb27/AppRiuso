@@ -25,6 +25,9 @@ import android.content.DialogInterface.OnClickListener;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.GoogleMap.OnMapClickListener;
 import android.util.Log;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 
 
 public class MapsActivity extends FragmentActivity
@@ -38,6 +41,8 @@ public class MapsActivity extends FragmentActivity
     GoogleMap mGoogleMap;
     SupportMapFragment mFragment;
     Marker currLocationMarker;
+
+    final Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +61,8 @@ public class MapsActivity extends FragmentActivity
         Toast.makeText(MapsActivity.this,
                 "onMapClick:\n" + latLng.latitude + " : " + latLng.longitude,
                 Toast.LENGTH_LONG).show();
+
+        confirm();
     }
 
     @Override
@@ -84,6 +91,7 @@ public class MapsActivity extends FragmentActivity
         //mGoogleMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
 
         mGoogleMap.setOnMapClickListener(this);
+        mGoogleMap.setOnMapLongClickListener(this); //for now not used
 
 
         buildGoogleApiClient();
@@ -171,6 +179,46 @@ public class MapsActivity extends FragmentActivity
 
         //If you only need one location, unregister the listener
         //LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
+    }
+
+
+    public void confirm() {
+
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+
+        // set title
+
+        alertDialogBuilder.setTitle("This is title");
+        //alertDialogBuilder.setIcon(R.drawable.ic_delete);
+
+        // set dialog message
+        alertDialogBuilder
+                .setMessage("Vuoi depositare qui il tuo oggetto?")
+                .setCancelable(false)
+                .setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,int id) {
+                        // if this button is clicked, close
+                        // current activity
+                        MapsActivity.this.finish();
+                    }
+                })
+                .setNegativeButton("No",new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,int id) {
+                        // if this button is clicked, just close
+                        // the dialog box and do nothing
+                        dialog.cancel();
+                    }
+                });
+
+        // create alert dialog
+        AlertDialog alertDialog = alertDialogBuilder.create();
+
+
+
+        // show it
+        alertDialog.show();
+
+
     }
 
 
