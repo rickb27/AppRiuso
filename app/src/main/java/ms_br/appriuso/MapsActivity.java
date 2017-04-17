@@ -29,7 +29,8 @@ import android.util.Log;
 
 public class MapsActivity extends FragmentActivity
         implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks,
-        GoogleApiClient.OnConnectionFailedListener, LocationListener/*, OnMapClickListener/*, OnMapLongClickListener */{
+        GoogleApiClient.OnConnectionFailedListener, LocationListener,
+        GoogleMap.OnMapClickListener, GoogleMap.OnMapLongClickListener {
 
     LocationRequest mLocationRequest;
     GoogleApiClient mGoogleApiClient;
@@ -44,12 +45,30 @@ public class MapsActivity extends FragmentActivity
         setContentView(R.layout.activity_maps);
 
         mFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+
         mFragment.getMapAsync(this);
 
 
     }
 
+    @Override
+    public void onMapClick(LatLng latLng) {
+        Toast.makeText(MapsActivity.this,
+                "onMapClick:\n" + latLng.latitude + " : " + latLng.longitude,
+                Toast.LENGTH_LONG).show();
+    }
 
+    @Override
+    public void onMapLongClick(LatLng latLng) { //not used
+        /*Toast.makeText(MapsActivity.this,
+                "onMapLongClick:\n" + latLng.latitude + " : " + latLng.longitude,
+                Toast.LENGTH_LONG).show();
+
+        //Add marker on LongClick position
+        MarkerOptions markerOptions =
+                new MarkerOptions().position(latLng).title(latLng.toString());
+        mGoogleMap.addMarker(markerOptions);*/
+    }
 
 
     @Override
@@ -58,24 +77,21 @@ public class MapsActivity extends FragmentActivity
         mGoogleMap.setMyLocationEnabled(true);
         mGoogleMap.getUiSettings().setZoomControlsEnabled(true);
 
+
         mGoogleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
         //mGoogleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         //mGoogleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
         //mGoogleMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
 
+        mGoogleMap.setOnMapClickListener(this);
 
-        /*mGoogleMap.setOnMapClickListener(new mGoogleMap.OnMapClickListener() {
-            @Override
-            public void onClick(LatLng point) {
-
-                //what you need to do when that button is clicked
-            }
-        });*/
 
         buildGoogleApiClient();
         mGoogleApiClient.connect();
 
     }
+
+
 
     /*public void onMapClick (LatLng point) {
         // Do Something

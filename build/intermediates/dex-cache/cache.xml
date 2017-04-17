@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="/home/simone/pdmsrc/AppRiuso2/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6b14f47a4de77f25d919b9f933ddf7d597315515">
-        <dex dex="/home/simone/pdmsrc/AppRiuso2/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_45f6fdf92f7668c8f8d3ff7e29a2b2ab21fcdd8e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/simone/pdmsrc/AppRiuso2/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/home/simone/AppRiuso/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
-        <dex dex="/home/simone/pdmsrc/AppRiuso2/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_dd4a5108060d85a478be15929ce98d3aa836cafb/classes.dex" />
+        <dex dex="/home/simone/AppRiuso/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_be8c937887be7e267883bd6ae8de2397617f30a8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/simone/AppRiuso/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dc028e19cdb0d7109c166ce1e33e726b227fade9">
+        <dex dex="/home/simone/AppRiuso/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_083cf551a7369f8343bc3f1e81ab6bc9ed546dee/classes.dex" />
     </item>
 
 </items>
