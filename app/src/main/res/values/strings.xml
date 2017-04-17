@@ -13,4 +13,6 @@
     <string name="name">Fullname</string>
     <string name="title_activity_maps">Map</string>
     <string name="btn_GoToMap">Open Maps</string>
+    <string name="nome_oggetto">Nome oggetto</string>
+    <string name="desc_oggetto">Descrizione</string>
 </resources>

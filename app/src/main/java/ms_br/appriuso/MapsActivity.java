@@ -197,6 +197,10 @@ public class MapsActivity extends FragmentActivity
                 .setCancelable(false)
                 .setPositiveButton("Yes",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,int id) {
+
+                        Intent intent = new Intent(MapsActivity.this, SetObjectActvity.class);
+                        startActivity(intent);
+
                         // if this button is clicked, close
                         // current activity
                         MapsActivity.this.finish();
