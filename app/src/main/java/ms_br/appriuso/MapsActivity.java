@@ -32,8 +32,8 @@ import android.content.DialogInterface;
 
 public class MapsActivity extends FragmentActivity
         implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks,
-        GoogleApiClient.OnConnectionFailedListener, LocationListener,
-        GoogleMap.OnMapClickListener, GoogleMap.OnMapLongClickListener {
+            GoogleApiClient.OnConnectionFailedListener, LocationListener,
+                GoogleMap.OnMapClickListener, GoogleMap.OnMapLongClickListener {
 
     LocationRequest mLocationRequest;
     GoogleApiClient mGoogleApiClient;
@@ -46,6 +46,7 @@ public class MapsActivity extends FragmentActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
@@ -53,14 +54,12 @@ public class MapsActivity extends FragmentActivity
 
         mFragment.getMapAsync(this);
 
-
     }
 
     @Override
     public void onMapClick(LatLng latLng) {
-        Toast.makeText(MapsActivity.this,
-                "onMapClick:\n" + latLng.latitude + " : " + latLng.longitude,
-                Toast.LENGTH_LONG).show();
+
+        Toast.makeText(MapsActivity.this, "onMapClick:\n" + latLng.latitude + " : " + latLng.longitude, Toast.LENGTH_LONG).show();
 
         confirm();
     }
@@ -80,10 +79,10 @@ public class MapsActivity extends FragmentActivity
 
     @Override
     public void onMapReady(GoogleMap gMap) {
+
         mGoogleMap = gMap;
         mGoogleMap.setMyLocationEnabled(true);
         mGoogleMap.getUiSettings().setZoomControlsEnabled(true);
-
 
         mGoogleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
         //mGoogleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
@@ -93,18 +92,10 @@ public class MapsActivity extends FragmentActivity
         mGoogleMap.setOnMapClickListener(this);
         mGoogleMap.setOnMapLongClickListener(this); //for now not used
 
-
         buildGoogleApiClient();
         mGoogleApiClient.connect();
 
     }
-
-
-
-    /*public void onMapClick (LatLng point) {
-        // Do Something
-        Log.d("arg0", point.latitude + "-" + point.longitude);
-    }*/
 
     protected synchronized void buildGoogleApiClient() {
 
@@ -123,13 +114,12 @@ public class MapsActivity extends FragmentActivity
         Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
 
         if (mLastLocation != null) {
+
             //place marker at current position
-            //mGoogleMap.clear();
             latLng = new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude());
             MarkerOptions markerOptions = new MarkerOptions();
             markerOptions.position(latLng);
             markerOptions.title("Current Position");
-            //markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
             currLocationMarker = mGoogleMap.addMarker(markerOptions);
         }
 
@@ -137,10 +127,8 @@ public class MapsActivity extends FragmentActivity
         mLocationRequest.setInterval(5000); //5 seconds
         mLocationRequest.setFastestInterval(3000); //3 seconds
         mLocationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
-        //mLocationRequest.setSmallestDisplacement(0.1F); //1/10 meter
 
         LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
-
     }
 
     @Override
@@ -157,10 +145,8 @@ public class MapsActivity extends FragmentActivity
     public void onLocationChanged(Location location) {
 
         //place marker at current position
-        //mGoogleMap.clear();
-        if (currLocationMarker != null) {
-            currLocationMarker.remove();
-        }
+        if (currLocationMarker != null) {currLocationMarker.remove();}
+
         latLng = new LatLng(location.getLatitude(), location.getLongitude());
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(latLng);
@@ -177,8 +163,6 @@ public class MapsActivity extends FragmentActivity
         // Zoom in, animating the camera.
         mGoogleMap.animateCamera(CameraUpdateFactory.zoomTo(19));
 
-        //If you only need one location, unregister the listener
-        //LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
     }
 
 
@@ -218,14 +202,8 @@ public class MapsActivity extends FragmentActivity
         // create alert dialog
         AlertDialog alertDialog = alertDialogBuilder.create();
 
-
-
         // show it
         alertDialog.show();
-
-
     }
-
-
 
 }

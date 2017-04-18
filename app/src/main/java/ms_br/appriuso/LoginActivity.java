@@ -24,11 +24,17 @@ import ms_br.appriuso.helper.SQLiteHandler;
 import ms_br.appriuso.helper.SessionManager;
 
 
-
-
 public class LoginActivity extends AppCompatActivity {
+
+    /*
+    ** Define
+     */
     private static final String TAG = "LoginActivity";
     private static final int REQUEST_SIGNUP = 0;
+
+    /*
+    ** Variable
+     */
     private Button btnLogin;
     private TextView btnLinkToRegister;
     private EditText inputEmail;
@@ -38,10 +44,9 @@ public class LoginActivity extends AppCompatActivity {
     private ProgressDialog pDialog;
 
 
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
@@ -49,7 +54,6 @@ public class LoginActivity extends AppCompatActivity {
         inputPassword = (EditText) findViewById(R.id.input_password);
         btnLogin = (Button) findViewById(R.id.btn_login);
         btnLinkToRegister = (TextView) findViewById(R.id.link_signup);
-
 
         // Progress dialog
         pDialog = new ProgressDialog(this);
@@ -63,6 +67,7 @@ public class LoginActivity extends AppCompatActivity {
 
         // Check if user is already logged in or not
         if (session.isLoggedIn()) {
+
             // User is already logged in. Take him to main activity
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);

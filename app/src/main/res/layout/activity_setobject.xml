@@ -2,6 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:weightSum="1">
 
     <TextView
@@ -68,10 +71,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:layout_weight="0.19"
+        android:layout_weight="0.66"
         android:gravity="top"
         android:maxLines="5"
         android:hint="@string/desc_oggetto"
         android:padding="2dp" />
+
+    <Button
+        android:id="@+id/btnNextStep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:background="@android:color/holo_blue_light"
+        android:gravity="center"
+        android:layout_gravity="right"
+        android:padding="10dp"
+        android:text="Next" />
 
 </LinearLayout>

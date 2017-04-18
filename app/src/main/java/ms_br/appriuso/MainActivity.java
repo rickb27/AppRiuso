@@ -6,11 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import java.util.HashMap;
-
 import ms_br.appriuso.helper.SQLiteHandler;
 import ms_br.appriuso.helper.SessionManager;
+
 
 public class MainActivity extends Activity {
 
@@ -38,9 +37,7 @@ public class MainActivity extends Activity {
 		// session manager
 		session = new SessionManager(getApplicationContext());
 
-		if (!session.isLoggedIn()) {
-			logoutUser();
-		}
+		if (!session.isLoggedIn()) {logoutUser();}
 
 		// Fetching user details from SQLite
 		HashMap<String, String> user = db.getUserDetails();
@@ -87,10 +84,11 @@ public class MainActivity extends Activity {
 	}
 
 	private void goIntoMaps() {
+
 		// Launching the map activity
 		Intent intent = new Intent(MainActivity.this, MapsActivity.class);
 		startActivity(intent);
 		finish();
-
 	}
+
 }

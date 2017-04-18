@@ -1,8 +1,4 @@
-/**
- * Author: Ravi Tamada
- * URL: www.androidhive.info
- * twitter: http://twitter.com/ravitamada
- */
+
 package ms_br.appriuso;
 
 import android.app.Activity;
@@ -30,6 +26,7 @@ import ms_br.appriuso.app.AppConfig;
 import ms_br.appriuso.app.AppController;
 import ms_br.appriuso.helper.SQLiteHandler;
 import ms_br.appriuso.helper.SessionManager;
+
 
 public class RegisterActivity extends Activity {
     private static final String TAG = RegisterActivity.class.getSimpleName();
