@@ -13,6 +13,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import java.util.HashMap;
+import java.util.StringTokenizer;
 
 public class SQLiteHandler extends SQLiteOpenHelper {
 
@@ -28,12 +29,14 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 	// Login table name
 	private static final String TABLE_USER = "user";
 
+
 	// Login Table Columns names
 	private static final String KEY_ID = "id";
 	private static final String KEY_NAME = "name";
 	private static final String KEY_EMAIL = "email";
 	private static final String KEY_UID = "uid";
 	private static final String KEY_CREATED_AT = "created_at";
+
 
 	public SQLiteHandler(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -42,18 +45,21 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 	// Creating Tables
 	@Override
 	public void onCreate(SQLiteDatabase db) {
+
+		// Login table
 		String CREATE_LOGIN_TABLE = "CREATE TABLE " + TABLE_USER + "("
 				+ KEY_ID + " INTEGER PRIMARY KEY," + KEY_NAME + " TEXT,"
 				+ KEY_EMAIL + " TEXT UNIQUE," + KEY_UID + " TEXT,"
 				+ KEY_CREATED_AT + " TEXT" + ")";
 		db.execSQL(CREATE_LOGIN_TABLE);
 
-		Log.d(TAG, "Database tables created");
+		Log.d(TAG, "Database tables user created");
 	}
 
 	// Upgrading database
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+
 		// Drop older table if existed
 		db.execSQL("DROP TABLE IF EXISTS " + TABLE_USER);
 

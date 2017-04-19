@@ -3,12 +3,30 @@
 
     <item
         is-multidex="true"
-        jar="/home/simone/AppRiuso/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/home/simone/.android/build-cache/8391a78a54f01c501adb0c84c08c56ca7f65ce69/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="674b40aed638c4751603c703343a31d29157609f">
-        <dex dex="/home/simone/AppRiuso/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_083cf551a7369f8343bc3f1e81ab6bc9ed546dee/classes.dex" />
+        sha1="888983f51cf34f57a93ff16832552f2f15937212">
+        <dex dex="/home/simone/AppRiuso/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9ac29d1dc95c6f2322db486fdf1d2a2e344239ac/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/simone/.android/build-cache/9e2ae3249ceee52ebb6302e14fa0ee7cb5974669/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bb115a110992b254f767f337da233071f6f940b8">
+        <dex dex="/home/simone/AppRiuso/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0ee8ce2137d1fb55b2d9b324a9c7a9c8e53b6dce/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/simone/.android/build-cache/2dc312dbc78d6dcb812f4acd35016419d685bd07/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="399f75732ff1ac159f9e73611536f1508bf18d3b">
+        <dex dex="/home/simone/AppRiuso/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a405cc7cb46cc93bec10862e6b955fc23d036a5f/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -18,6 +36,51 @@
         revision="25.0.2"
         sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
         <dex dex="/home/simone/AppRiuso/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_be8c937887be7e267883bd6ae8de2397617f30a8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/simone/.android/build-cache/a348f70f47b4a5298e75aedb52216fe2bed1802d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b6818f5804ca0b5eb089d902458faea4179eca1d">
+        <dex dex="/home/simone/AppRiuso/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d4eb20ea331db377c84204d7599cf80b55aa55d2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/simone/AppRiuso/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7af055a41794cf3cd8eff067c933a1c884100840">
+        <dex dex="/home/simone/AppRiuso/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_083cf551a7369f8343bc3f1e81ab6bc9ed546dee/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/simone/.android/build-cache/cbfe6c0876da40f76b6f5cf7cf5ef11081862b3b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a1aa1dd9917e887bfe732cc5e561ae6ae8f9a84a">
+        <dex dex="/home/simone/AppRiuso/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d87894cba000a7aaee9062a293cbc7a9e48babd7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/simone/.android/build-cache/a0549c3283aab38886709ad6f330bb7d91a337f9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0a5d5553c308643a9022f15513ebdd59e9c78d82">
+        <dex dex="/home/simone/AppRiuso/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_356d7da2cce619b8ac53f3e66c0d52404218a299/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/simone/.android/build-cache/1dde11e86db71cd4b57ca01c42a05a74b549ceec/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b215e312bdc1ee7bfda31674eab5df8bad45c014">
+        <dex dex="/home/simone/AppRiuso/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_29b47569c9f0ca522762978731041eb8fea5767e/classes.dex" />
     </item>
 
 </items>

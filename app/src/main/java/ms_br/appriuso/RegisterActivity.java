@@ -62,9 +62,9 @@ public class RegisterActivity extends Activity {
 
         // Check if user is already logged in or not
         if (session.isLoggedIn()) {
+
             // User is already logged in. Take him to main activity
-            Intent intent = new Intent(RegisterActivity.this,
-                    MainActivity.class);
+            Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
         }
@@ -77,11 +77,11 @@ public class RegisterActivity extends Activity {
                 String password = inputPassword.getText().toString().trim();
 
                 if (!name.isEmpty() && !email.isEmpty() && !password.isEmpty()) {
+
                     registerUser(name, email, password);
                 } else {
-                    Toast.makeText(getApplicationContext(),
-                            "Please enter your details!", Toast.LENGTH_LONG)
-                            .show();
+
+                    Toast.makeText(getApplicationContext(), "Please enter your details!", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -130,13 +130,13 @@ public class RegisterActivity extends Activity {
                         JSONObject user = jObj.getJSONObject("user");
                         String name = user.getString("name");
                         String email = user.getString("email");
-                        String created_at = user
-                                .getString("created_at");
+                        String created_at = user.getString("created_at");
 
                         // Inserting row in users table
                         db.addUser(name, email, uid, created_at);
 
-                        Toast.makeText(getApplicationContext(), "User successfully registered. Try login now!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "User successfully registered. Try login now!",
+                                Toast.LENGTH_LONG).show();
 
                         // Launch login activity
                         Intent intent = new Intent(

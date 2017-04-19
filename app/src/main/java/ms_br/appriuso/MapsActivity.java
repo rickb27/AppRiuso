@@ -29,6 +29,8 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 
+import ms_br.appriuso.app.SingletonLatLng;
+
 
 public class MapsActivity extends FragmentActivity
         implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks,
@@ -59,10 +61,14 @@ public class MapsActivity extends FragmentActivity
     @Override
     public void onMapClick(LatLng latLng) {
 
+        // Singleton to change position clicked
+        SingletonLatLng.getInstance().setLatLng(latLng);
+
         Toast.makeText(MapsActivity.this, "onMapClick:\n" + latLng.latitude + " : " + latLng.longitude, Toast.LENGTH_LONG).show();
 
         confirm();
     }
+
 
     @Override
     public void onMapLongClick(LatLng latLng) { //not used
@@ -155,13 +161,13 @@ public class MapsActivity extends FragmentActivity
         //markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
         currLocationMarker = mGoogleMap.addMarker(markerOptions);
 
-        Toast.makeText(this,"Location Changed",Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this,"Location Changed",Toast.LENGTH_SHORT).show();
 
         //zoom to current position:
-        mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,11));
+        //mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,11));
 
         // Zoom in, animating the camera.
-        mGoogleMap.animateCamera(CameraUpdateFactory.zoomTo(19));
+        //mGoogleMap.animateCamera(CameraUpdateFactory.zoomTo(19));
 
     }
 
