@@ -14,6 +14,8 @@ import android.util.Log;
 
 import java.util.HashMap;
 
+import ms_br.appriuso.app.AppObject;
+
 public class SQLiteHandlerObject extends SQLiteOpenHelper {
 
 	private static final String TAG = SQLiteHandlerObject.class.getSimpleName();
@@ -23,7 +25,7 @@ public class SQLiteHandlerObject extends SQLiteOpenHelper {
 	private static final int DATABASE_VERSION = 2;
 
 	// Database Name
-	private static final String DATABASE_NAME = "android_api2";
+	private static final String DATABASE_NAME = "android_api";
 
 	// Object table name
 	private static final String TABLE_OBJECT = "object2";
@@ -96,32 +98,29 @@ public class SQLiteHandlerObject extends SQLiteOpenHelper {
 	/**
 	 * Storing object details in database
 	 * */
-	public void addObject(String category, String title, String description,
-			String latitude, String longitude, String name, String email, String image1,
-						  String image2, String image3, String image4, String image5, String image6,
-						  	String image7, String image8, String uid, String created_at) {
+	public void addObject(AppObject obj) {
 
 		SQLiteDatabase db = this.getWritableDatabase();
 
 		ContentValues values = new ContentValues();
 
-		values.put(KEY_CATEGORY, category);
-		values.put(KEY_TITLE, title);
-		values.put(KEY_DESCRIPTION, description);
-		values.put(KEY_LATITUDE, latitude);
-		values.put(KEY_LONGITUDE, longitude);
-		values.put(KEY_NAME, name);
-		values.put(KEY_EMAIL, email);
-		values.put(KEY_IMAGE_1, image1);
-		values.put(KEY_IMAGE_2, image2);
-		values.put(KEY_IMAGE_3, image3);
-		values.put(KEY_IMAGE_4, image4);
-		values.put(KEY_IMAGE_5, image5);
-		values.put(KEY_IMAGE_6, image6);
-		values.put(KEY_IMAGE_7, image7);
-		values.put(KEY_IMAGE_8, image8);
-		values.put(KEY_UID, uid);
-		values.put(KEY_CREATED_AT, created_at);
+		values.put(KEY_CATEGORY, obj.getCategory());
+		values.put(KEY_TITLE, obj.getTitle());
+		values.put(KEY_DESCRIPTION, obj.getDescription());
+		values.put(KEY_LATITUDE, obj.getLatitude());
+		values.put(KEY_LONGITUDE, obj.getLongitude());
+		values.put(KEY_NAME, obj.getName());
+		values.put(KEY_EMAIL, obj.getEmail());
+		values.put(KEY_IMAGE_1, obj.getImage1());
+		values.put(KEY_IMAGE_2, obj.getImage2());
+		values.put(KEY_IMAGE_3, obj.getImage3());
+		values.put(KEY_IMAGE_4, obj.getImage4());
+		values.put(KEY_IMAGE_5, obj.getImage5());
+		values.put(KEY_IMAGE_6, obj.getImage6());
+		values.put(KEY_IMAGE_7, obj.getImage7());
+		values.put(KEY_IMAGE_8, obj.getImage8());
+		values.put(KEY_UID, obj.getUID());
+		values.put(KEY_CREATED_AT, obj.getCreated_at());
 
 		// Inserting Row
 		long id = db.insert(TABLE_OBJECT, null, values);

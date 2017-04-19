@@ -11,6 +11,9 @@ public class AppConfig {
 	// Server object register url
 	public static String URL_REGISTER_OBJECT = "http://appriuso.altervista.org/android_object_api/register_object.php";
 
+	// Server get all objects  url
+	public static String URL_GET_ALL_OBJECTS = "http://appriuso.altervista.org/android_object_api/register_object.php";
+
 	// Server user login url
 	//public static String URL_LOGIN = "http://192.168.0.2/android_login_api/login.php";
 

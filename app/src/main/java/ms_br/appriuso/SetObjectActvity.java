@@ -37,6 +37,7 @@ import java.util.Map;
 
 import ms_br.appriuso.app.AppConfig;
 import ms_br.appriuso.app.AppController;
+import ms_br.appriuso.app.AppObject;
 import ms_br.appriuso.app.SingletonLatLng;
 import ms_br.appriuso.helper.SQLiteHandler;
 import ms_br.appriuso.helper.SQLiteHandlerObject;
@@ -172,20 +173,15 @@ public class SetObjectActvity extends Activity implements View.OnClickListener {
      */
     public void doNextStep(int modo) {
 
-        //Index
-        if (modo == 0) {
-            if (curPage++ > MAX_STEP) curPage = MAX_STEP;
-        }
-        if (modo == 1) {
-            if (curPage-- < 0) curPage = 0;
-        }
+        //Index range
+        if (modo == 0) {if (curPage++ > MAX_STEP) curPage = MAX_STEP;}
+        if (modo == 1) {if (curPage-- < 0) curPage = 0;}
+
         //Layout change logic
         switch (curPage) {
 
-            case STEP_0:
-                setContentView(R.layout.activity_setobject); break;
-            case STEP_1:
-                setContentView(R.layout.activity_uploadimage); break;
+            case STEP_0: setContentView(R.layout.activity_setobject); break;
+            case STEP_1: setContentView(R.layout.activity_uploadimage); break;
         }
     }
 
@@ -230,32 +226,32 @@ public class SetObjectActvity extends Activity implements View.OnClickListener {
                     if (!error) {
                         // User successfully stored in MySQL
                         // Now store the user in sqlite
-                        String uid = jObj.getString("uid");
+
+                        AppObject objFromDb = new AppObject();
+
+                        objFromDb.setUID(jObj.getString("uid"));
 
                         JSONObject obj= jObj.getJSONObject("object");
-                        String category = obj.getString("category");
-                        String title = obj.getString("title");
-                        String description = obj.getString("description");
-                        String latitude = obj.getString("latitude");
-                        String longitude = obj.getString("longitude");
-                        String image1 = obj.getString("image1");
-                        String image2 = obj.getString("image2");
-                        String image3 = obj.getString("image3");
-                        String image4 = obj.getString("image4");
-                        String image5 = obj.getString("image5");
-                        String image6 = obj.getString("image6");
-                        String image7 = obj.getString("image7");
-                        String image8 = obj.getString("image8");
-                        String name = obj.getString("name");
-                        String email = obj.getString("email");
-                        String created_at = obj.getString("created_at");
+
+                        objFromDb.setCategory(obj.getString("category"));
+                        objFromDb.setTitle(obj.getString("title"));
+                        objFromDb.setDescription(obj.getString("description"));
+                        objFromDb.setLatitude(obj.getString("latitude"));
+                        objFromDb.setLongitude(obj.getString("longitude"));
+                        objFromDb.setName(obj.getString("name"));
+                        objFromDb.setEmail(obj.getString("email"));
+                        objFromDb.setImage1(obj.getString("image1"));
+                        objFromDb.setImage2(obj.getString("image2"));
+                        objFromDb.setImage3(obj.getString("image3"));
+                        objFromDb.setImage4(obj.getString("image4"));
+                        objFromDb.setImage5(obj.getString("image5"));
+                        objFromDb.setImage6(obj.getString("image6"));
+                        objFromDb.setImage7(obj.getString("image7"));
+                        objFromDb.setImage8(obj.getString("image8"));
+                        objFromDb.setCreated_at(obj.getString("created_at"));
 
                         // Inserting row in users table
-                        dbObj.addObject(category, title, description,
-                                //Double.parseDouble(latitude), Double.parseDouble(longitude),
-                                latitude, longitude,
-                                    name, email, image1, image2, image3, image4, image5, image6,
-                                        image7, image8, uid, created_at);
+                        dbObj.addObject(objFromDb);
 
                         Toast.makeText(getApplicationContext(), "Object registered! Enjoy",
                                 Toast.LENGTH_LONG).show();

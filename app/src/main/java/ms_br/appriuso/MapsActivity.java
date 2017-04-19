@@ -56,6 +56,10 @@ public class MapsActivity extends FragmentActivity
 
         mFragment.getMapAsync(this);
 
+
+        // Check object from server sql and then mark it on map
+        doCheckObjectFromServer();
+
     }
 
     @Override
@@ -87,7 +91,7 @@ public class MapsActivity extends FragmentActivity
     public void onMapReady(GoogleMap gMap) {
 
         mGoogleMap = gMap;
-        mGoogleMap.setMyLocationEnabled(true);
+        //mGoogleMap.setMyLocationEnabled(true);
         mGoogleMap.getUiSettings().setZoomControlsEnabled(true);
 
         mGoogleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
@@ -210,6 +214,12 @@ public class MapsActivity extends FragmentActivity
 
         // show it
         alertDialog.show();
+    }
+
+
+    public void doCheckObjectFromServer(){
+
+
     }
 
 }
